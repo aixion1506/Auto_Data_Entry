@@ -17,6 +17,10 @@ def run_automation(name, password):
 
         page.wait_for_timeout(3000)  # 3초 대기 (UI 반영)
 
+        # ✅ 브라우저가 계속 떠 있도록 대기
+        print("🚀 브라우저가 열려 있습니다. 사용자가 닫을 때까지 유지됩니다.")
+        input("❗ 브라우저를 닫은 후 엔터를 눌러 프로그램을 종료하세요...")
+
         browser.close()  # 브라우저 종료
 
 @app.route("/puppeteer/run", methods=["POST"])
